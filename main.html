@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <title>QUIZ</title>
+</head>
+<body>
+<!--START LANDING SECTION	
+-->
+	<section class="landing-page-container">
+		<div class="landig-page-wrapper">
+			<h1 id="landing-page-heading">Quiz</h1>
+			<div class="landing-inputs-wrapper">
+				<input type="text" id="firstname" class="fullname" placeholder="Enter firstname">
+				<input type="text" id="lastname" class="fullname" placeholder="Enter lastname">
+				<button id="start-quiz-btn">START QUIZ</button>
+			</div>
+		</div>
+	</section>
+<!--END LANDING SECTION
+******-->
+
+<!--
+	START ADMIN SECTION 
+******-->
+	<section class="admin-container">
+		<div class="admin-wrapper">
+			<div class="header">
+				<h2>Add question</h2>
+				<a href=""><button id="admin-logout-btn">Logout</button></a>
+			</div>
+			
+			<div class="forms-wrapper">
+				<button id="question-update-btn">Update</button>
+				<button id="question-delete-btn">Delete</button>
+				
+				<textarea id="new-question-text" cols="" rows="" placeholder="New question"></textarea>
+				
+				<div class="admin-options-container">
+					<div class="admin-option-wrapper">
+						<input type="radio" class="admin-option-0" name="answer" value="0">
+						<input type="text" class="admin-option admin-option-0" value="">
+					</div>
+					<div class="admin-option-wrapper">
+						<input type="radio" class="admin-option-1" name="answer" value="1">
+						<input type="text" class="admin-option admin-option-1" value="">
+					</div>
+				</div>
+				
+				<button id="question-insert-btn">Insert</button>
+			</div>
+			
+			<button id="question-clear-btn">Clear List</button>
+		</div>
+		<div class="inserted-question-wrapper">
+		<!--<p><span>1. Question test</span><button id="question-1">Edit</button></p>-->
+		</div>
+		
+		<div class="results-list-container">
+			<div class="clear">
+				<h2>Results</h2>
+				<button id="results-clear-btn">Clear results</button>
+			</div>
+			
+			
+			<div class="results-list-wrapper">
+				
+			<!--<p class="person person-1"><span class="person-1">...</span><button id="delete-result-btn_1" class="delete-result-btn">Delete</button></p>
+-->			
+			</div>
+		</div>
+	
+	</section>
+<!--
+	END ADMIN SECTION-->
+
+<!--
+	START QUIZ SECTION-->
+	<section class="quiz-container">
+		<div class="quiz-wrapper">
+			
+			<h2 id="asked-question-text">Question text</h2>
+			
+			<div class="instant-answer-container">
+				<img id="emotion" src="img/good.png">
+				<div id="instant-answer-wrapper">
+					<p id="instant-answer-text">This is correct answer</p>
+					<button id="next-question-btn">Next</button>
+				</div>
+			</div>
+			
+			
+			<div class="quiz-options-wrapper">
+				<div class="choice-0"><span class="choice-0">A</span><p class="choice-0">test1</p></div>
+				<div class="choice-1"><span class="choice-1">B</span><p class="choice-1">test2</p></div>
+				<div class="choice-2"><span class="choice-2">C</span><p class="choice-2">test3</p></div>
+				<div class="choice-3"><span class="choice-3">D</span><p class="choice-3">test4</p></div>
+			</div>
+		</div>
+<!--		PROGRESS BAR-->
+		<div class="progressBar">
+			<p id="progress">2/20</p>
+			<progress value="30" max="100"></progress>
+		</div>
+	</section>
+	
+<!--	END QUIZ SECTION-->
+	
+<!--	START FINAL RESULT PAGE-->
+	<section class="final-result-container">
+		<div class="final-result-wrapper">
+			<div class="final-result">
+				<a href=""><button id="final-logout-btn">LOGOUT</button></a>
+				<h2 id="final-score-text">Final score</h2>
+			</div>
+		</div>
+	</section>
+<!--	END FINAL RESULT PAGE-->
+	
+	</body>
+	<script src="script.js"></script>
+</html>

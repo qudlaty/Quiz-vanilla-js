@@ -1,0 +1,86 @@
+.admin-container, .quiz-container, .final-result-container {
+	display: none;
+}
+
+
+.landing-page-container, .quiz-container, .final-result-container {
+	border: solid 1px red;
+}
+
+.admin-wrapper, .landig-page-wrapper {
+	border: solid 1px green;
+	background-image: url(img/fhd_bg.jpg);
+	width: 100%;
+	height: inherit;
+}
+
+.results-list-container {
+	border: solid 1px blue;
+}
+
+#landing-page-heading {
+	text-align: center;
+	padding: 12px;
+}
+
+.landing-page-container {
+	width: 100%;
+	height: inherit;
+
+}
+
+.forms-wrapper {
+	display: block;
+	border: solid 2px ;
+	
+}
+
+
+
+.instant-answer-container {
+	opacity: 0;
+}
+#emotion {
+	display: block;
+	float: left;
+	margin: 10px 11px
+}
+.red {
+	border: 1px solid red;
+	background-color: indianred;
+}
+
+.green {
+	border: 1px solid green;
+	background-color: palegreen;
+}
+
+
+/*
+#next-question-btn {
+	opacity: 1;
+	
+}
+*/
+
+
+
+#question-clear-btn, #admin-logout-btn {
+	margin: auto;
+ 	 display: block; 
+}
+
+#new-question-text {
+	display: block;
+	margin: 25px;
+	
+}
+
+.inserted-question-wrapper {
+	display: block;
+	border: solid 2px red;
+}
+
+#question-update-btn, #question-delete-btn {
+	visibility: hidden;
+}

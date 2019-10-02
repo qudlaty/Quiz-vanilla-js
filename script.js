@@ -253,7 +253,7 @@ var UIController = (function() {
 				
 				z = document.querySelectorAll('.admin-option').length;
 				
-				inputHTML = '<div class="admin-option-wrapper"><input type="radio" class="admin-option-' + z + '" name="answer"value="' + z + '"><input type="text" class="admin-option admin-option-' + z + '"value=""></div>';
+				inputHTML = '<div class="admin-option-wrapper"><input type="radio" class="option-radio admin-option-' + z + '" name="answer"value="' + z + '"><input type="text" class="admin-option admin-option-' + z + '"value=""></div>';
 				
 				domItems.adminOptionsContainer.insertAdjacentHTML('beforeend', inputHTML);
 				
@@ -313,7 +313,7 @@ var UIController = (function() {
 				
 				for(var x = 0; x < foundItem.options.length; x++) {
 					
-					optionHTML += '<div class="admin-option-wrapper"><input type="radio" class="admin-option-' + x + '" name="answer" value="' + x + '"><input type="text" class="admin-option admin-option-' + x + '" value="' + foundItem.options[x] + '"></div>';
+					optionHTML += '<div class="admin-option-wrapper"><input type="radio" class="option-radio admin-option-' + x + '" name="answer" value="' + x + '"><input type="text" class="admin-option admin-option-' + x + '" value="' + foundItem.options[x] + '"></div>';
 				}
 				domItems.adminOptionsContainer.innerHTML = optionHTML;
 				

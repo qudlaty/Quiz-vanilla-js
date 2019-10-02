@@ -1,50 +1,127 @@
+
+/*changes visibilty of sections from js*/
 .admin-container, .quiz-container, .final-result-container {
 	display: none;
 }
 
-
-.landing-page-container, .quiz-container, .final-result-container {
-	border: solid 1px red;
-}
-
-.admin-wrapper, .landig-page-wrapper {
-	border: solid 1px green;
-	background-image: url(img/fhd_bg.jpg);
-	width: 100%;
-	height: inherit;
-}
-
-.results-list-container {
-	border: solid 1px blue;
-}
-
-#landing-page-heading {
-	text-align: center;
-	padding: 12px;
+body {
+  color:cornsilk;
+  height: 100%;
+  margin: 0;
+  background-image: url(img/fhd_bg.jpg);
 }
 
 .landing-page-container {
-	width: 100%;
-	height: inherit;
+  text-align: center;
+}
+
+.login-wrap {
+  padding: 6vh;
+}
+
+.login-wrap button {
+  color: green;
+  font-size: 4vh;
+  padding: 1vh;
+  margin: 3vh;
+  border-radius: 7px;
+}
+
+.login-wrap input {
+  margin:  10px 0;
+  font-size: 3vh;
+  border-radius: 7px;
+  padding: 1vh;
+}
+/*landing page ends */
+
+
+
+
+/*admin panel */
+
+.admin-wrapper {
+  display: block;
+  border: 2px solid black;
 
 }
 
+.admin-wrapper button{
+  padding: 0.5vw;
+  margin: 0.5vh;
+}
+
+.admin-header {
+  padding: 1vw;
+  text-align: center;
+}
+/*forms adding quest*/
 .forms-wrapper {
-	display: block;
-	border: solid 2px ;
-	
+  padding: 0.5vw;
+  width: 48vw;
+  min-height: 45vh;
+  text-align: center;
+  float: left;
+  border: 1px green solid;
 }
+
+#new-question-text {
+  width: 70%;
+	margin: 2vw;
+  padding: 1vh; 
+}
+
+.admin-option-wrapper {
+  padding: 0;
+  margin:0;
+  border: none;
+  font-size: 1em;
+}
+.admin-option {
+  margin: 0.5vw;
+  font-size: 1em;
+  min-width: 50%;
+}
+
+.option-radio {
+}
+
+/*qustion list part*/
+.question-list-wrap {
+  float: right;
+  min-height: 45vh;
+  width: 48vw;
+  padding: 0.5vw;
+  border: 2px solid black;
+}
+
+.inserted-question-wrapper {
+  width: 40vw;
+  text-align: left;
+  padding: 2vw 2vh 2vw 6vh;
+}
+
+.results-list-container {
+  min-height: 45vh;
+  border: solid 1px blue;
+  padding: 0.5vw;
+  width: 48vw;
+  float: none;
+}
+
 
 
 
 .instant-answer-container {
 	opacity: 0;
 }
+
 #emotion {
 	display: block;
 	float: left;
 	margin: 10px 11px
 }
+
 .red {
 	border: 1px solid red;
 	background-color: indianred;
@@ -55,32 +132,12 @@
 	background-color: palegreen;
 }
 
-
-/*
-#next-question-btn {
-	opacity: 1;
-	
-}
-*/
-
-
-
 #question-clear-btn, #admin-logout-btn {
-	margin: auto;
- 	 display: block; 
-}
-
-#new-question-text {
-	display: block;
-	margin: 25px;
-	
-}
-
-.inserted-question-wrapper {
-	display: block;
-	border: solid 2px red;
+  display: block; 
 }
 
 #question-update-btn, #question-delete-btn {
 	visibility: hidden;
+  padding: 0;
+  margin: 2px;
 }

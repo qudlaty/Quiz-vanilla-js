@@ -1,7 +1,5 @@
-/*eslint-env browser*/
 
-/************************************
-*********************QUIZ CONTROLER*/
+/*******************QUIZ CONTROLER*/
 
 var quizController = (function () {
 	
@@ -48,7 +46,7 @@ var quizController = (function () {
 		score: 0
 	};
 	
-	var adminFullName = ['A', 'A'];
+	var adminFullName = ['a', 'a'];
 	
 	var personLocalStorage = {
 		
@@ -285,8 +283,7 @@ var UIController = (function() {
 				
 				domItems.insertedQuestsWrapper.insertAdjacentHTML('afterbegin', questHTML);
 				
-			}
-			
+			}	
 		},
 		
 		editQuestsList: function(event, storageQuestList, addInpsDynFn, updateQuestListFn) {
@@ -738,27 +735,4 @@ var controller = (function(quizCtrl, UICtrl) {
 		
 	
 })(quizController, UIController);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

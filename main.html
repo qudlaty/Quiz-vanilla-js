@@ -31,12 +31,12 @@
 		<div class="admin-wrapper">
 			<div class="admin-header">
 				<h2>Add question</h2>
-				<a href=""><button id="admin-logout-btn">Logout</button></a>
+				<a href=""><button class="main-btn" id="admin-logout-btn">Logout</button></a>
 			</div>
 			
 			<div class="forms-wrapper">
-        <button id="question-update-btn">Update</button>
-        <button id="question-delete-btn">Delete</button>
+        <button class="secondary-btn" id="question-update-btn">Update</button>
+        <button class="secondary-btn" id="question-delete-btn">Delete</button>
 
         <textarea id="new-question-text" cols="" rows="" placeholder="Add new question"></textarea>
 
@@ -44,29 +44,29 @@
           <div class="admin-option-wrapper">
             <input type="radio" class="option-radio admin-option-0" name="answer" value="0">
             <input type="text" class="admin-option admin-option-0" value="" placeholder="add at least 2 answers">
+          
           </div>
           <div class="admin-option-wrapper">
             <input type="radio" class="option-radio admin-option-1" name="answer" value="1">
             <input type="text" class="admin-option admin-option-1" value="">
           </div>
         </div>
-        <button id="question-insert-btn">Add question to quiz</button>
+        <button class="main-btn" id="question-insert-btn">Add question to quiz</button>
       </div>
 
       <!--btn clear list was here-->
       <div class="question-list-wrap">
-        <button id="question-clear-btn">Clear List</button>
+        <button class="main-btn" id="question-clear-btn">Clear List</button>
         <div class="inserted-question-wrapper">
           <!--content from js-->
         </div>
       </div>
       <div class="results-list-container">
         <div class="clear">
-            <h2>Results</h2>
-            <button id="results-clear-btn">Clear results</button>
+          <h2>Results</h2>
+          <button class="main-btn" id="results-clear-btn">Clear results</button>
+          <div class="results-list-wrapper"><!--content from js--></div>
         </div>
-
-        <div class="results-list-wrapper"><!--content from js--></div>
       </div>
     </div>
 	</section>
@@ -84,7 +84,7 @@
 				<img id="emotion" src="img/good.png">
 				<div id="instant-answer-wrapper">
 					<p id="instant-answer-text">This is correct answer</p>
-					<button id="next-question-btn">Next</button>
+					<button class="secondary-btn" id="next-question-btn">Next</button>
 				</div>
 			</div>
 			
@@ -109,7 +109,7 @@
 	<section class="final-result-container">
 		<div class="final-result-wrapper">
 			<div class="final-result">
-				<a href=""><button id="final-logout-btn">LOGOUT</button></a>
+				<a href=""><button class="main-btn"  id="final-logout-btn">LOGOUT</button></a>
 				<h2 id="final-score-text">Final score</h2>
 			</div>
 		</div>

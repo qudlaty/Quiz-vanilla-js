@@ -238,8 +238,7 @@ var UIController = (function() {
 		/*****-----Final results section elements---***/
 		finalResultSection: document.querySelector(".final-result-container"),
 		finalScoreText: document.getElementById("final-score-text")
-		
-		
+			
 	};
 	
 	return {

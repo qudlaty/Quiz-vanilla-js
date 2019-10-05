@@ -91,7 +91,7 @@ body {
   background-color: transparent;
 }
 .forms-wrapper textarea::placeholder {
-    color:red;
+    color: cornsilk;
   }
 
 .forms-wrapper input[type=text] {
@@ -134,7 +134,7 @@ body {
   line-height: 1.5;
   width: 40vw;
   text-align: left;
-  padding: 2vh 4vw;
+  padding: 1vh 3vw;
 }
 
 .inserted-question-wrapper button {

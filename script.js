@@ -276,7 +276,7 @@ var UIController = (function() {
 				
 				numberingArr.push(i + 1);
 				
-				questHTML = '<p><span>' + numberingArr[i] + '. ' + getQuestions.getQuestionCollection()[i].questionText + '</span><button id="question-' + getQuestions.getQuestionCollection()[i].id + '">Edit</button></p>';
+				questHTML = '<p><span>' + numberingArr[i] + '. ' + getQuestions.getQuestionCollection()[i].questionText + '</span><button class="secondary-btn" id="question-' + getQuestions.getQuestionCollection()[i].id + '">Edit</button></p>';
 				
 		//console.log(getQuestions.getQuestionCollection()[i].id);
 				
@@ -430,23 +430,20 @@ var UIController = (function() {
 		displayQuestion: function(storageQuestionList, progress) {
 			var newOptionHTML, characterArr;
 			
-			characterArr = ['a.', 'b.', 'c.', 'd.', 'e.', 'f.'];
+			characterArr = ['a.', 'b.', 'c.', 'd.', 'e.', 'f.','g', 'h'];
 			
 			if(storageQuestionList.getQuestionCollection().length > 0) {
 				domItems.askedQuestText.textContent = storageQuestionList.getQuestionCollection()[progress.questionIndex].questionText;
 				
 				domItems.quizOptionsWrapper.innerHTML = '';
-				//adding new els dynamically
+				//adding new elements dynamically
 				for(var i = 0; i < storageQuestionList.getQuestionCollection()[progress.questionIndex].options.length; i++) {
 					
 					newOptionHTML = '<div class="choice-' + i + '"><span class="choice-' + i + '">' + characterArr[i] + '</span><p class="choice-' + i + '">' + storageQuestionList.getQuestionCollection()[progress.questionIndex].options[i] + '</p></div>';
 					
 					domItems.quizOptionsWrapper.insertAdjacentHTML('beforeend', newOptionHTML);
-					
-				}
-				
-			}
-			
+        }
+      }
 		},
 		
 		displayProgress: function(storageQuestList, progress) {
@@ -511,7 +508,7 @@ var UIController = (function() {
 
 						console.log(currPerson);
 					} else {
-						alert("Quiz not ready. Admin's fault");
+						alert("Quiz not ready. Login as admin to add questions.");
 					}
 					
 				} else {
@@ -613,15 +610,15 @@ var controller = (function(quizCtrl, UICtrl) {
 	UICtrl.createQuestionList(quizCtrl.getQuestionLocalStorage);
 	
 	selectedDomItems.questInsertBtn.addEventListener('click', function() {
-		
-	var adminOptions = document.querySelectorAll('.admin-option');
-		
-	var checkBoolean = quizCtrl.addQuestionOnLocalStorage(selectedDomItems.newQuestionText, adminOptions);
+    
+    var adminOptions = document.querySelectorAll('.admin-option');
+  
+    var checkBoolean = quizCtrl.addQuestionOnLocalStorage(selectedDomItems.newQuestionText, adminOptions);
 	
-	if(checkBoolean) {
-		UICtrl.createQuestionList(quizCtrl.getQuestionLocalStorage);
-	}
-		
+    if(checkBoolean) {
+      UICtrl.createQuestionList(quizCtrl.getQuestionLocalStorage);
+    }
+
 	});
 	
 	selectedDomItems.insertedQuestsWrapper.addEventListener('click', function(e) {

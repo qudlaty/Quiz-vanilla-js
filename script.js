@@ -618,6 +618,7 @@ var controller = (function(quizCtrl, UICtrl) {
     if(checkBoolean) {
       UICtrl.createQuestionList(quizCtrl.getQuestionLocalStorage);
     }
+/*    backDefaultViev()*/
 
 	});
 	

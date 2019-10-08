@@ -22,6 +22,7 @@ body {
   display: inline-block; 
   color: blue;
 }
+
 .secondary-btn {
   font-size: 1.2vh;
   padding: 1vh;
@@ -61,11 +62,6 @@ body {
   display: block;
 }
 
-.admin-wrapper button{
-  padding: 0.5vw;
-  margin: 0.5vh;
-}
-
 .admin-header {
   padding: 1vw;
   text-align: center;
@@ -92,7 +88,13 @@ body {
 }
 .forms-wrapper textarea::placeholder {
     color: cornsilk;
-  }
+}
+
+.admin-option-wrapper {
+  padding: 0;
+  margin:0;
+  border: none; 
+}
 
 .forms-wrapper input[type=text] {
   border-radius: 5px;
@@ -110,14 +112,6 @@ body {
 #question-update-btn, #question-delete-btn {
 	visibility: hidden;
 }
-
-.admin-option-wrapper {
-  padding: 0;
-  margin:0;
-  border: none;
-}
-
-
 
 /*questions list part*/
 

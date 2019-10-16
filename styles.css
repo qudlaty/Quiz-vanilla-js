@@ -4,11 +4,15 @@
 	display: none;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   color: cornsilk;
   height: 100%;
   margin: 0;
-  background-image: url(img/fhd_bg.jpg);
+  background-image: url(img/fhd_bg.jpg);	
 }
 
 /*buttons*/

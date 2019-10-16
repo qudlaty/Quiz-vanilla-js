@@ -5,8 +5,13 @@
 }
 
 html {
-  height: 100%;
-  background-image: url(img/fhd_bg.jpg);	
+    background: url(img/fhd_bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -14,8 +19,8 @@ body {
   height: 100%;  
 }
 
-/*buttons*/
 
+/*buttons*/
 .main-btn {
   font-size: 2vh;
   font-weight: 600;

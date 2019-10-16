@@ -5,13 +5,8 @@
 }
 
 html {
-    background: url(img/fhd_bg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
+    background: linear-gradient(360deg, #79AADD 0%, #CC11 200%) 
+      no-repeat center fixed; 
 }
 
 body {

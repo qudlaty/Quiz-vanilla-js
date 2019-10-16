@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <title>QUIZ</title>
+</head>
+<body>
+<!--START LANDING SECTION	
+-->
+	<section class="landing-page-container">
+		<div class="landig-page-wrapper">
+			<h1>Quiz</h1>
+      <p>Login to start quiz</p>
+      <p>Login as admin, to create and manage questions.</p>
+			<div class="landing-inputs-wrapper login-wrap">
+				<input type="text" id="firstname" class="fullname" placeholder="Enter firstname">
+				<input type="text" id="lastname" class="fullname" placeholder="Enter lastname">
+        <br/>
+				<button id="start-quiz-btn">START QUIZ</button>
+			</div>
+		</div>
+	</section>
+<!--END LANDING SECTION
+******-->
+
+<!--
+	START ADMIN SECTION 
+******-->
+  <section class="admin-container">
+		<div class="admin-wrapper">
+			<div class="admin-header">
+				<h2>Add question</h2>
+				<a href=""><button class="main-btn" id="admin-logout-btn">Logout</button></a>
+			</div>
+			
+			<div class="forms-wrapper">
+        <button class="secondary-btn" id="question-update-btn">Update</button>
+        <button class="secondary-btn" id="question-delete-btn">Delete</button>
+
+        <textarea id="new-question-text" cols="" rows="" placeholder="Add new question"></textarea>
+
+        <div class="admin-options-container">
+          <div class="admin-option-wrapper">
+            <input type="radio" class="option-radio admin-option-0" name="answer" value="0">
+            <input type="text" class="admin-option admin-option-0" value="" placeholder="add at least 2 answers">  
+          </div>
+          <div class="admin-option-wrapper">
+            <input type="radio" class="option-radio admin-option-1" name="answer" value="1">
+            <input type="text" class="admin-option admin-option-1" value="">
+          </div>
+        </div>
+        <button class="main-btn" id="question-insert-btn">Add question to quiz</button>
+      </div>
+
+      <!--btn clear list was here-->
+      <div class="question-list-wrap">
+        <button class="main-btn" id="question-clear-btn">Clear List</button>
+        <div class="inserted-question-wrapper">
+          <!--content from js-->
+        </div>
+      </div>
+      <div class="results-list-container">
+        <div class="clear">
+          <h2>Results</h2>
+          <button class="main-btn" id="results-clear-btn">Clear results</button>
+          <div class="results-list-wrapper"><!--content from js--></div>
+        </div>
+      </div>
+    </div>
+	</section>
+<!--
+	END ADMIN SECTION-->
+
+<!--
+	START QUIZ SECTION-->
+	<section class="quiz-container">
+		<div class="quiz-wrapper">
+			
+			<h2 id="asked-question-text">Question text</h2>
+			
+			<div class="instant-answer-container">
+				<img id="emotion" src="img/good.png">
+				<div id="instant-answer-wrapper">
+					<p id="instant-answer-text">This is correct answer</p>
+					<button class="secondary-btn" id="next-question-btn">Next</button>
+				</div>
+			</div>
+			
+			
+			<div class="quiz-options-wrapper">
+				<div class="choice-0"><span class="choice-0">A</span><p class="choice-0">test1</p></div>
+				<div class="choice-1"><span class="choice-1">B</span><p class="choice-1">test2</p></div>
+				<div class="choice-2"><span class="choice-2">C</span><p class="choice-2">test3</p></div>
+				<div class="choice-3"><span class="choice-3">D</span><p class="choice-3">test4</p></div>
+			</div>
+		</div>
+<!--		PROGRESS BAR-->
+		<div class="progress-bar">
+			<p id="progress">2/20</p>
+			<progress value="30" max="100"></progress>
+		</div>
+	</section>
+	
+<!--	END QUIZ SECTION-->
+	
+<!--	START FINAL RESULT PAGE-->
+	<section class="final-result-container">
+		<div class="final-result-wrapper">
+			<div class="final-result">
+				<a href=""><button class="main-btn"  id="final-logout-btn">LOGOUT</button></a>
+				<h2 id="final-score-text">Final score</h2>
+			</div>
+		</div>
+	</section>
+<!--	END FINAL RESULT PAGE-->
+	
+	</body>
+	<script src="script.js"></script>
+</html>

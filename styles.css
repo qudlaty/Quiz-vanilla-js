@@ -6,13 +6,12 @@
 
 html {
   height: 100%;
+  background-image: url(img/fhd_bg.jpg);	
 }
 
 body {
   color: cornsilk;
-  height: 100%;
-  margin: 0;
-  background-image: url(img/fhd_bg.jpg);	
+  height: 100%;  
 }
 
 /*buttons*/

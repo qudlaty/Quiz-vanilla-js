@@ -244,15 +244,17 @@ var UIController = (function() {
 	return {
 		getDomItems: domItems,
 		
+    // adding questions options
 		addInputsDynamically: function() {
 			
 			var addInput = function() {
 				
 				var inputHTML, z;
-				
+        
 				z = document.querySelectorAll('.admin-option').length;
 				
-				inputHTML = '<div class="admin-option-wrapper"><input type="radio" class="option-radio admin-option-' + z + '" name="answer"value="' + z + '"><input type="text" class="admin-option admin-option-' + z + '"value=""></div>';
+				inputHTML = '<div class="admin-option-wrapper"><input type="radio" class="option-radio admin-option-' + z + '" name="answer" value="' +
+					z + '"> <input type="text" class="admin-option admin-option-' + z + '" value=""></div>';
 				
 				domItems.adminOptionsContainer.insertAdjacentHTML('beforeend', inputHTML);
 				
@@ -260,8 +262,8 @@ var UIController = (function() {
 				
 				domItems.adminOptionsContainer.lastElementChild.lastElementChild.addEventListener('focus', addInput);
 			}
+      
 			domItems.adminOptionsContainer.lastElementChild.lastElementChild.addEventListener('focus', addInput);
-			
 		},
 		
 		createQuestionList: function(getQuestions) {
@@ -285,7 +287,9 @@ var UIController = (function() {
 			}	
 		},
 		
-		editQuestsList: function(event, storageQuestList, addInpsDynFn, updateQuestListFn) {
+    
+    /// editing questions 
+		editQuestsList: function(event, storageQuestList, addInputsDynFn, updateQuestListFn) {
 			
 			var getId, getStorageQuestList, placeInArr, optionHTML;
 			
@@ -312,7 +316,7 @@ var UIController = (function() {
 				
 				for(var x = 0; x < foundItem.options.length; x++) {
 					
-					optionHTML += '<div class="admin-option-wrapper"><input type="radio" class="option-radio admin-option-' + x + '" name="answer" value="' + x + '"><input type="text" class="admin-option admin-option-' + x + '" value="' + foundItem.options[x] + '"></div>';
+					optionHTML += '<div class="admin-option-wrapper"><input type="radio" class="option-radio admin-option-' + x + '" name="answer" value="' + x + '"> <input type="text" class="admin-option admin-option-' + x + '" value="' + foundItem.options[x] + '"></div>';
 				}
 				domItems.adminOptionsContainer.innerHTML = optionHTML;
 				
@@ -321,7 +325,7 @@ var UIController = (function() {
 				domItems.questInsertBtn.style.visibility = 'hidden';
 				domItems.questsClearBtn.style.pointerEvents = 'none';
 				
-				addInpsDynFn();
+				addInputsDynFn();
 				
 				
 				

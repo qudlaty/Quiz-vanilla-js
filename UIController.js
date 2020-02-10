@@ -40,11 +40,13 @@ export var UIController = (function() {
 	};
 	
 	return {
+		
 		getDomItems: domItems,
 		
     // adding questions options
 		addInputsDynamically: function() {
 			
+			var restoreDefaultView;
 			var addInput = function() {
 				
 				var inputHTML, z;
@@ -118,30 +120,33 @@ export var UIController = (function() {
 				}
 				domItems.adminOptionsContainer.innerHTML = optionHTML;
 				
-				domItems.questUpdateBtn.style.visibility = 'visible';
-				domItems.questDeleteBtn.style.visibility = 'visible';
-				domItems.questInsertBtn.style.visibility = 'hidden';
+				domItems.questUpdateBtn.style.display = 'inline-block';
+				domItems.questDeleteBtn.style.display = 'inline-block';
+				domItems.questInsertBtn.style.display = 'none';
 				domItems.questsClearBtn.style.pointerEvents = 'none';
 				
 				addInputsDynFn();
 				
 				
 				
+				// here-> change options after adding question ==========>>>>>
 				
-				var backDefaultViev = function() {
+					restoreDefaultView = function() {
+					
 					var updatedOptions;
 					
 					domItems.newQuestionText.value = '';
-					updatedOptions = document.querySelectorAll(".admin-option");		
+					updatedOptions = document.querySelectorAll(".admin-option");	
+					
 					for(var i = 0; i < updatedOptions.length; i++) {
 
 						updatedOptions[i].value = '';
 						updatedOptions[i].previousElementSibling.checked = false;
 					}
 
-					domItems.questUpdateBtn.style.visibility = 'hidden';
-					domItems.questDeleteBtn.style.visibility = 'hidden';
-					domItems.questInsertBtn.style.visibility = 'visible';
+					domItems.questUpdateBtn.style.display = 'none';
+					domItems.questDeleteBtn.style.display = 'none';
+					domItems.questInsertBtn.style.display = 'inline-block';
 					domItems.questsClearBtn.style.pointerEvents = '';
 
 					updateQuestListFn(storageQuestList);
@@ -177,7 +182,7 @@ export var UIController = (function() {
 								getStorageQuestList.splice(placeInArr, 1, foundItem);
 								storageQuestList.setQuestionCollection(getStorageQuestList);
 								
-								backDefaultViev();
+								restoreDefaultView();
 								
 							} else {
 								alert('Check correct answer');
@@ -199,7 +204,7 @@ export var UIController = (function() {
 					
 					storageQuestList.setQuestionCollection(getStorageQuestList);
 					
-					backDefaultViev();
+					restoreDefaultView();
 				}
 				
 				domItems.questDeleteBtn.onclick = deleteQuestion;
@@ -232,7 +237,7 @@ export var UIController = (function() {
 		displayQuestion: function(storageQuestionList, progress) {
 			var newOptionHTML, characterArr;
 			
-			characterArr = ['a.', 'b.', 'c.', 'd.', 'e.', 'f.','g', 'h'];
+			characterArr = ['a', 'b', 'c.', 'd', 'e', 'f','g', 'h'];
 			
 			if(storageQuestionList.getQuestionCollection().length > 0) {
 				domItems.askedQuestText.textContent = storageQuestionList.getQuestionCollection()[progress.questionIndex].questionText;

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <meta name="viewport" charset="UTF-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0" charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="styles.css">
   <title>QUIZ</title>
 </head>
@@ -11,8 +11,8 @@
 	<section class="landing-page-container">
 		<div class="landig-page-wrapper">
 			<h1>Quiz</h1>
-      <p>Login to start quiz</p>
-      <p>Login as a, a to create and manage questions.</p>
+      <p>Enter firstname and lastname to start quiz</p>
+      <p>Login as 'a', 'a' to create and manage questions.</p>
 			<div class="landing-inputs-wrapper login-wrap">
 				<input type="text" id="firstname" class="fullname" placeholder="Enter firstname">
 				<input type="text" id="lastname" class="fullname" placeholder="Enter lastname">
@@ -30,7 +30,7 @@
   <section class="admin-container">
 		<div class="admin-wrapper">
 			<div class="admin-header">
-				<h2>Add question</h2>
+				<h2>Admin panel</h2>
 				<a href=""><button class="main-btn" id="admin-logout-btn">Logout</button></a>
 			</div>
 			
@@ -55,15 +55,17 @@
 
       <!--btn clear list was here-->
       <div class="question-list-wrap">
-        <button class="main-btn" id="question-clear-btn">Clear List</button>
+      	<h2 class="admin-section-headers">Questions list</h2>
+        <button class="main-btn " id="question-clear-btn">Clear List</button>
         <div class="inserted-question-wrapper">
           <!--content from js-->
         </div>
       </div>
+      
       <div class="results-list-container">
         <div class="clear">
-          <h2>Results</h2>
-          <button class="main-btn" id="results-clear-btn">Clear results</button>
+          <h2 class="admin-section-headers">Results</h2>
+          <button class="main-btn clear-all-btn" id="results-clear-btn">Clear results</button>
           <div class="results-list-wrapper"><!--content from js--></div>
         </div>
       </div>
@@ -89,10 +91,12 @@
 			
 			
 			<div class="quiz-options-wrapper">
-				<div class="choice-0"><span class="choice-0">A</span><p class="choice-0">test1</p></div>
-				<div class="choice-1"><span class="choice-1">B</span><p class="choice-1">test2</p></div>
-				<div class="choice-2"><span class="choice-2">C</span><p class="choice-2">test3</p></div>
-				<div class="choice-3"><span class="choice-3">D</span><p class="choice-3">test4</p></div>
+				<div class="choice-0">
+					<span class="choice-0">A</span><p class="choice-0">test1</p>
+				</div>
+				<div class="choice-1">
+					<span class="choice-1">B</span><p class="choice-1">test2</p>
+				</div>
 			</div>
 		</div>
 <!--		PROGRESS BAR-->
@@ -114,7 +118,7 @@
 		</div>
 	</section>
 <!--	END FINAL RESULT PAGE-->
-	
-	</body>
 	<script type="module" src="script.js"></script>
+	</body>
+	
 </html>

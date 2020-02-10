@@ -44,6 +44,7 @@ export var quizController = (function () {
 		
 	}
 	
+	
 	var currPersonData = {
 		fullname: [],
 		score: 0
@@ -91,6 +92,7 @@ export var quizController = (function () {
 					optionsArr.push(opts[i].value);
 				}
 				
+				//correct answ
 				if(opts[i].previousElementSibling.checked && 
 				   opts[i].value !== '') {
 					corrAns = opts[i].value;
@@ -109,29 +111,29 @@ export var quizController = (function () {
 			if(newQuestionText.value != '') {
 				if(optionsArr.length > 1) {
 					if(isChecked) {
-					
-					newQuestion = new Question(questionId, newQuestionText.value,
+						newQuestion = new Question(questionId, newQuestionText.value,
 											   optionsArr, corrAns);
-					getStoredQuests = questionLocalStorage.getQuestionCollection();
+						getStoredQuests = questionLocalStorage.getQuestionCollection();
 
-					getStoredQuests.push(newQuestion);
-			
-					questionLocalStorage.setQuestionCollection(getStoredQuests);
-			
-					newQuestionText.value = '';
-					for(var x = 0; x < opts.length; x++) {
-						opts[x].value = '';
-						opts[x].previousElementSibling.checked = false;
-					}
-						
-			//console.log(questionLocalStorage.getQuestionCollection());
-						
+						getStoredQuests.push(newQuestion);
+
+						questionLocalStorage.setQuestionCollection(getStoredQuests);
+
+						newQuestionText.value = '';
+
+						for(var x = 0; x < opts.length; x++) {
+							opts[x].value = '';
+							opts[x].previousElementSibling.checked = false;
+						}
+//						console.log(opts, opts.length, 'opts');// -opts need to be removed
+				
 						return true;
 						
 					} else {
 						alert('Check correct answer');
 						return false;
 					}
+					
 				
 				} else {
 					alert('Insert at least 2 options');

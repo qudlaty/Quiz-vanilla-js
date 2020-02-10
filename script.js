@@ -3,6 +3,9 @@ import { quizController } from './quizController.js';
 import { UIController } from './UIController.js';
 
 
+/* document.querySelector(".forms-wrapper button").addEventListener("click", restoreDefaultView());*/
+
+
 /************************************
 ******************** CONTROLER*/
 
@@ -21,11 +24,10 @@ var controller = (function(quizCtrl, UICtrl) {
   
     var checkBoolean = quizCtrl.addQuestionOnLocalStorage(selectedDomItems.newQuestionText, adminOptions);
 	
-    if(checkBoolean) {
+    if(checkBoolean){
       UICtrl.createQuestionList(quizCtrl.getQuestionLocalStorage);
     }
-/*    backDefaultViev()*/
-
+		restoreDefaultView();
 	});
 	
 	selectedDomItems.insertedQuestsWrapper.addEventListener('click', function(e) {
